@@ -1,0 +1,147 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@400;700&display=swap");
+
+body {
+     font-family: "Barlow", sans-serif;
+}
+
+nav {
+     font-family: "Barlow Condensed", sans-serif;
+}
+
+/* PageMainContent */
+.container-wrapper-home,
+.container-wrapper-about,
+.container-wrapper-skills,
+.container-wrapper-certifications,
+.container-wrapper-experiences,
+.container-wrapper-projects,
+.container-wrapper-education,
+.container-wrapper-notfound {
+     @apply flex flex-grow p-5 justify-center;
+}
+
+.container-wrapper-home,
+.container-wrapper-about,
+.container-wrapper-skills,
+.container-wrapper-education,
+.container-wrapper-certifications,
+.container-wrapper-notfound {
+     @apply items-center;
+}
+
+.container-skills,
+.container-certifications,
+.container-education,
+.container-notfound {
+     @apply mt-32 mb-32;
+}
+
+.container-certifications,
+.container-education {
+     @apply section-regular;
+}
+
+.container-experiences,
+.container-projects {
+     @apply section-regular mt-32 mb-32 duration-75 ease-in opacity-100;
+}
+
+.container-home {
+     @apply flex flex-col mt-32 -translate-y-[5rem] text-center;
+}
+
+.container-about {
+     @apply section-regular mt-32 -translate-y-[4rem] justify-center;
+}
+
+/* Tailwind CSS classes sets */
+.section-regular {
+     @apply w-10/12 md:w-8/12 md:text-lg lg:w-6/12 xl:w-5/12;
+}
+.burger-menu-line {
+     @apply border-2 border-black rounded-sm;
+}
+.h2-regular {
+     @apply uppercase text-xl tracking-wider font-bold mb-10;
+}
+.vertical-line {
+     @apply border-l-2 pt-5 pb-5 pl-5 ml-5;
+}
+.ul-tags {
+     @apply flex flex-wrap pb-11;
+}
+.li-tag {
+     @apply mt-2 mr-2;
+}
+.tag {
+     @apply flex border rounded-xl w-max px-5 py-1.5 text-sm;
+}
+.ul-details {
+     @apply text-lg space-y-5 pb-11;
+}
+.progression-bar {
+     position: relative;
+}
+.progression-bar::after {
+     content: "";
+     position: absolute;
+     bottom: -1px;
+     left: 0;
+     width: 0;
+     height: 1px;
+     background-color: rgb(203 213 225);
+     transition: width 0.3s ease-in-out;
+}
+.progression-bar:hover::after {
+     width: 100%;
+}
+.menu-item-active {
+     border-bottom: 1px solid rgb(203 213 225);
+}
+
+/* Effect for links inside text blocks */
+.link-inline {
+     overflow: hidden;
+     position: relative;
+     display: inline-block;
+     padding: 0.04rem;
+}
+.link-inline::before,
+.link-inline::after {
+     content: "";
+     position: absolute;
+     width: 100%;
+     left: 0;
+}
+.link-inline::before {
+     background-color: #000000;
+     height: 2px;
+     bottom: 0;
+     transform-origin: 0;
+     transform: scaleX(0);
+     transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.link-inline:hover::before {
+     transform: scaleX(1);
+}
+.link-inline::after {
+     content: attr(data-replace);
+     transform: translate3d(0, 200%, 0);
+     transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.link-inline:hover::after {
+     transform: translate3d(0, 0, 0);
+}
+.link-inline span {
+     transform: translateY(4px);
+     display: inline-block;
+     transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.link-inline:hover span {
+     transform: translate3d(-200%, 0, 0);
+}
