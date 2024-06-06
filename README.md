@@ -32,7 +32,6 @@ A paginated, responsive, mobile-first professional website built with React and 
 -    **Slide-In Menu**: A user-friendly slide-in menu that appears when the burger menu is clicked, improving navigation and user experience.
 -    **Footer Links with Engaging Hover-Over Animations**: Interactive footer links that come alive with engaging animations on hover, adding a touch of sophistication.
 -    **Cross-Browser Compatibility**: Compatible with all modern browsers, ensuring consistent behavior across platforms.
--    **Accessible**: Follows accessibility best practices to ensure a user-friendly experience for all users. Checked on [WAVE](https://wave.webaim.org/report#/https://henriquepcmrct.netlify.app/).
 
 ## License
 
