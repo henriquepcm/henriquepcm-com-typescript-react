@@ -1,5 +1,5 @@
 import { useMenu } from "./hooks/useMenu";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header, Footer, Menu } from "./components/ui";
 import {
      Home,
@@ -17,7 +17,7 @@ function App() {
 
      return (
           <>
-               <HashRouter>
+               <BrowserRouter>
                     <Menu
                          menuIsOpen={menuIsOpen}
                          toggleMenu={toggleMenu}
@@ -41,7 +41,7 @@ function App() {
                          <Route path="*" element={<PageNotFound />} />
                     </Routes>
                     <Footer />
-               </HashRouter>
+               </BrowserRouter>
           </>
      );
 }
